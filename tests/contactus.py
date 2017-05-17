@@ -47,12 +47,13 @@ class ContactUs(unittest.TestCase):
 		# self.qdh = self.driver.get(qdh)
 		# self.ayana = self.driver.get(flowerstudio)
 		# self.detik = self.driver.get(detik)
-	# def test_ContactUsFlower(self):
+	def test_ContactUsFlower(self):
 	# 	# for asd in client_urls:
 	# 	# 	# self.driver = self.driver.get(asd)
 	# 	# 	print (asd)
 	# 	# self.driver = self.driver.get(asd)
-		driver = self.driver.get(client_urls[0])
+		# driver = self.driver.get(client_urls[0])
+		driver = self.driver.get('http://qaflowerstudio.qeon.co.id/contact-us')
 		# logger.info	("-----Open Contact Us Flower Studio -----")
 		self.driver.find_element_by_name('name').send_keys('qaqeon')
 		logger.info	("-----Input Kolom Name -----")
@@ -66,38 +67,39 @@ class ContactUs(unittest.TestCase):
 		self.driver.find_element_by_name('comment').send_keys('Sorry for spamming once a week, this is automatic test. Please Dont Reply This email ')
 		logger.info	("-----Input Kolom Comment -----")
 		self.driver.find_element_by_class_name('btn--main__small').click()
+		# driver.find_element_by_class_name('btn--main').click()
 		logger.info	("-----Input Send Buttom -----")
-		time.sleep(13)
-		try:
-			assert 'Thank you. Your submission was successful and we will get back to you shortly.' in self.driver.page_source
-		except AssertionError:
-			logger.critical("Input Form Gagal",exc_info=True)
-		logger.info	("-----Send Form -----")
+		# time.sleep(13)
+		# try:
+		# 	assert 'Thank you. Your submission was successful and we will get back to you shortly.' in self.driver.page_source
+		# except AssertionError:
+		# 	logger.critical("Input Form Gagal",exc_info=True)
+		# logger.info	("-----Send Form -----")
 		
 
-	def test_ContactUsQDH(self):
-		driver = self.driver.get(client_urls[1])
-		self.driver.find_element_by_name('name').send_keys('qaqeon')
-		logger.info	("-----Input Kolom Name -----")
-		time.sleep(1)
-		self.driver.find_element_by_name('email').send_keys('qadev@qeon.co.id')
-		logger.info	("-----Input Kolom Email -----")
-		time.sleep(1)
-		self.driver.find_element_by_name('company').send_keys('PT QA QEON INTERACTIVE')
-		logger.info	("-----Input Kolom Company -----")
-		time.sleep(1)
-		self.driver.find_element_by_name('telp').send_keys('08123456789')
-		logger.info	("-----Input Kolom telp -----")
-		time.sleep(1)
-		self.driver.find_element_by_name('message').send_keys('Sorry for spamming once a week, this is automatic test. Please Dont Reply This email')
-		logger.info	("-----Input Kolom message -----")
-		time.sleep(1)
-		self.driver.find_element_by_class_name('btn--main').click()
-		logger.info	("-----Input Submit Button -----")
-		try:
-			assert 'Thank you for your inquiry!' in self.driver.page_source
-		except AssertionError:
-			logger.critical("Input Form Gagal",exc_info=True)
+	# def test_ContactUsQDH(self):
+	# 	driver = self.driver.get(client_urls[1])
+	# 	self.driver.find_element_by_name('name').send_keys('qaqeon')
+	# 	logger.info	("-----Input Kolom Name -----")
+	# 	time.sleep(1)
+	# 	self.driver.find_element_by_name('email').send_keys('qadev@qeon.co.id')
+	# 	logger.info	("-----Input Kolom Email -----")
+	# 	time.sleep(1)
+	# 	self.driver.find_element_by_name('company').send_keys('PT QA QEON INTERACTIVE')
+	# 	logger.info	("-----Input Kolom Company -----")
+	# 	time.sleep(1)
+	# 	self.driver.find_element_by_name('telp').send_keys('08123456789')
+	# 	logger.info	("-----Input Kolom telp -----")
+	# 	time.sleep(1)
+	# 	self.driver.find_element_by_name('message').send_keys('Sorry for spamming once a week, this is automatic test. Please Dont Reply This email')
+	# 	logger.info	("-----Input Kolom message -----")
+	# 	time.sleep(1)
+	# 	self.driver.find_element_by_class_name('btn--main').click()
+	# 	logger.info	("-----Input Submit Button -----")
+	# 	try:
+	# 		assert 'Thank you for your inquiry!' in self.driver.page_source
+	# 	except AssertionError:
+	# 		logger.critical("Input Form Gagal",exc_info=True)
 		
 	# def test_ContactUsQDH(self):
 	# 	driver = self.ayana

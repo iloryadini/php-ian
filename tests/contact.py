@@ -37,7 +37,7 @@ class ContactUs(unittest.TestCase):
 		# for browser in browsers:
 		self.driver = webdriver.Chrome()
 		self.driver.maximize_window()
-		self.driver.implicitly_wait(5)
+		self.driver.implicitly_wait(20)
 		# self.driver.get('http://qaflowerstudio.qeon.co.id/contact-us')
 		for asd in client_urls:
 			self.driver.get(asd)
@@ -50,28 +50,31 @@ class ContactUs(unittest.TestCase):
 	def test_ContactUs(self):
 		driver = self.driver
 		driver.find_element_by_name('name').send_keys('qaqeon')
-		time.sleep(1)
+		# time.sleep(1)
 		driver.find_element_by_name('email').send_keys('qadev@qeon.co.id')
-		time.sleep(1)
+		# time.sleep(1)
 		if "No.Telp" in driver.page_source:
 			driver.find_element_by_name('telp').send_keys('081234567')
 		else:
 			driver.find_element_by_name('phone').send_keys('081234567')
-			return
-		time.sleep(1)
+		# time.sleep(1)
 		if "qdh" in driver.page_source:
 			driver.find_element_by_name('message').send_keys('Sorry for spamming once a week, this is automatic test. Please Dont Reply This email')
 		else:
 			driver.find_element_by_name('comment').send_keys('Sorry for spamming once a week, this is automatic test. Please Dont Reply This email')
-			return
-		time.sleep(1)
+		# time.sleep(1)
 		if "Company" in driver.page_source:
 			driver.find_element_by_name('company').send_keys('PT QA QEON INTERACTIVE')
 		else:
 			return
-		
-
-
+		# time.sleep(2)
+		if "contactUs-button" in driver.page_source:
+			driver.find_element_by_class_name('btn--main').click()
+		else:
+			driver.find_element_by_class_name('btn--main__small').click()
+		return
+		# time.sleep(2)
+		driver.find_element_by_partial_link_text('SUBMIT').click()
 	def tearDown(self):
 		self.driver.quit()
 		
