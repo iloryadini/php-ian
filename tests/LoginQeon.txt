@@ -1,0 +1,25 @@
+2017-05-22 15:12:43,860 - 2017-05-22 15:12:43,860 - logging - INFO - -----Start Login Fail Account Not Registered-----
+2017-05-22 15:12:49,739 - 2017-05-22 15:12:49,739 - logging - INFO - -----Login Fail Account Not Registered Success-----
+2017-05-22 15:13:14,910 - 2017-05-22 15:13:14,910 - logging - INFO - -----Start Login with Facebook Success-----
+2017-05-22 15:13:39,431 - 2017-05-22 15:13:39,431 - logging - INFO - -----Logout Success-----
+2017-05-22 15:13:55,586 - 2017-05-22 15:13:55,586 - logging - INFO - -----start Login Google-----
+2017-05-22 15:14:22,274 - 2017-05-22 15:14:22,274 - logging - INFO - -----Start Login Fail Password Empty-----
+2017-05-22 15:14:27,245 - 2017-05-22 15:14:27,245 - logging - INFO - -----Login Fail Password Empty Success-----
+2017-05-22 15:14:42,158 - 2017-05-22 15:14:42,158 - logging - INFO - -----Start Login Fail Wrong Password-----
+2017-05-22 15:14:47,881 - 2017-05-22 15:14:47,881 - logging - INFO - -----Login Fail Wrong Password Success-----
+2017-05-22 15:15:03,000 - 2017-05-22 15:15:03,000 - logging - INFO - -----start Login With Username-----
+2017-05-22 15:15:04,088 - 2017-05-22 15:15:04,088 - logging - CRITICAL - Hasil URL nya berbeda
+Traceback (most recent call last):
+  File "D:\qa\selenium-python\tests\LoginQeon.py", line 48, in test_loginSuccess
+    self.assertEqual("https://accounts.qeon.com/account/settings", driver.current_url)
+  File "c:\users\colour\appdata\local\programs\python\python36\lib\unittest\case.py", line 821, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "c:\users\colour\appdata\local\programs\python\python36\lib\unittest\case.py", line 1194, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "c:\users\colour\appdata\local\programs\python\python36\lib\unittest\case.py", line 666, in fail
+    raise self.failureException(msg)
+AssertionError: 'https://accounts.qeon.com/account/settings' != 'https://accounts.qeon.com/?_p=&_l=&gbkey=&s=&_e=&_o='
+- https://accounts.qeon.com/account/settings
++ https://accounts.qeon.com/?_p=&_l=&gbkey=&s=&_e=&_o=
+
+2017-05-22 15:15:04,387 - 2017-05-22 15:15:04,387 - logging - INFO - -----Login Username Success-----

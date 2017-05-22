@@ -8,15 +8,15 @@ import logging
 
 #create a logger
 logger = logging.getLogger('logging')
-logger.setLevel(logging.INFO)
+logger.setLevel(logging.DEBUG)
 
 #create log-handlers
 #I need the critical logs in a file called Youtube.txt
 handler_critical = logging.FileHandler('LoginQeon.txt','w')
-handler_critical.setLevel(logging.WARNING)
+handler_critical.setLevel(logging.DEBUG)
 #I need all the logs above the INFO level on the console
 handler_info = logging.StreamHandler()
-handler_info.setLevel(logging.INFO)
+handler_info.setLevel(logging.ERROR)
 
 #FORMATTERES
 formatter = logging.Formatter('%(asctime)s - %(asctime)s - %(name)s - %(levelname)s - %(message)s')
