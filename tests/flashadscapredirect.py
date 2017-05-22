@@ -31,7 +31,6 @@ url = "http://qabiznethotspot.qeon.co.id/?username=6e6577686f7473706f74&password
 
 class FlashadsCap(unittest.TestCase):
 	def setUp(self):
-		# for browser in browsers:
 		self.driver = webdriver.Chrome()
 		self.driver.maximize_window()
 		self.driver.implicitly_wait(5)
@@ -40,14 +39,7 @@ class FlashadsCap(unittest.TestCase):
 			count = count + 1
 			self.driver.get(url)
 			self.test_FlasadsCapRedirect()
-		# for asd in client_urls:
-		# 	# self.driver = self.driver.get(asd)
-		# 	print (asd)
-		# self.driver = self.driver.get(asd)
-		# self.flower = self.driver.get(client_urls)
-		# self.qdh = self.driver.get(qdh)
-		# self.ayana = self.driver.get(flowerstudio)
-		# self.detik = self.driver.get(detik)
+			
 	def test_FlasadsCapRedirect(self):
 		driver = self.driver
 		time.sleep(20)

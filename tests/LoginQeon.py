@@ -7,7 +7,7 @@ import unittest
 import logging
 
 #create a logger
-logger = logging.getLogger(__name__)
+logger = logging.getLogger('logging')
 logger.setLevel(logging.INFO)
 
 #create log-handlers
